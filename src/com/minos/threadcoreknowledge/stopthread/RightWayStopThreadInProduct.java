@@ -1,7 +1,7 @@
 package com.minos.threadcoreknowledge.stopthread;
 
 /**
- * 描述：      实际生产中处理中断时，catch了InterruptedException之后
+ * 描述：      最佳实践1，实际生产中处理中断时，catch了InterruptedException之后
  *            应该优先选择: 在方法签名中抛出异常；如果这么做，那么run()
  *            中便会强制对该方法try/catch
  * @Author: minos
