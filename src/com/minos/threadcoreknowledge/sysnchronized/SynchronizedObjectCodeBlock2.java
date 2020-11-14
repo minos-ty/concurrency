@@ -20,7 +20,7 @@ public class SynchronizedObjectCodeBlock2 implements Runnable {
 
         /** 锁对象可以设置成this, 也可以自定义对象 */
         synchronized (lock1) {
-            System.out.println("lock1我是对象锁的方式修饰符形式，" + Thread.currentThread().getName());
+            System.out.println("lock1，" + Thread.currentThread().getName());
             try {
                 Thread.sleep(3000);
             } catch (InterruptedException e) {
@@ -29,9 +29,9 @@ public class SynchronizedObjectCodeBlock2 implements Runnable {
             System.out.println(Thread.currentThread().getName() + " lock1运行结束");
         }
 
-        /** 设置不同的锁可以实现线程并行执行 */
+        /** 设置不同的锁可以实现线程并行执行,而不是等到thread1执行完后thread2才能拿到锁 */
         synchronized (lock2) {
-            System.out.println("lock2我是对象锁的方式修饰符形式，" + Thread.currentThread().getName());
+            System.out.println("lock2，" + Thread.currentThread().getName());
             try {
                 Thread.sleep(3000);
             } catch (InterruptedException e) {
