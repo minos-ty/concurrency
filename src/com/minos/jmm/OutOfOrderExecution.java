@@ -10,8 +10,12 @@ import java.util.concurrent.CountDownLatch;
  */
 public class OutOfOrderExecution {
 
-    private static int x = 0, y = 0;
-    private static int a = 0, b = 0;
+//    private static int x = 0, y = 0;
+//    private static int a = 0, b = 0;
+
+    // 加上volatile禁止重排序后可以得到正确的结果 此时结果不会出现 0 0 的情况
+    private volatile static int x = 0, y = 0;
+    private volatile static int a = 0, b = 0;
 
     public static void main(String[] args) throws InterruptedException {
 
@@ -62,7 +66,7 @@ public class OutOfOrderExecution {
             two.join();
 
             String result = "第" + i + "次 （" + x + "," + y + ")";
-            if (x == 1 && y == 1) {
+            if (x == 0 && y == 0) {
                 System.out.println(result);
                 break;
             } else {
