@@ -4,13 +4,14 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
+ * 实现一个全局不能捕获子线程异常的处理器
  * 描述：     自己的MyUncaughtExceptionHandler
  */
-public class MyUncaughtExceptionHandler implements Thread.UncaughtExceptionHandler {
+public class MyUncaughtExceptionHandler_03 implements Thread.UncaughtExceptionHandler {
 
     private String name;
 
-    public MyUncaughtExceptionHandler(String name) {
+    public MyUncaughtExceptionHandler_03(String name) {
         this.name = name;
     }
 
