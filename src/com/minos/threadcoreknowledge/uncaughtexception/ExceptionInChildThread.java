@@ -9,6 +9,7 @@ package com.minos.threadcoreknowledge.uncaughtexception;
 public class ExceptionInChildThread implements Runnable{
 
     // 子线程虽然抛出了异常，但是丝毫不影响主线程的执行
+    // 这时在时间生产环境中我们可能注意不到子线程发生异常
     public static void main(String[] args) {
         new Thread(new ExceptionInChildThread()).start();
         for (int i = 0; i < 1000; i++) {
