@@ -23,8 +23,7 @@ class Producer implements Runnable {
 
     private EventStorage storage;
 
-    public Producer(
-            EventStorage storage) {
+    public Producer(EventStorage storage) {
         this.storage = storage;
     }
 
@@ -40,8 +39,7 @@ class Consumer implements Runnable {
 
     private EventStorage storage;
 
-    public Consumer(
-            EventStorage storage) {
+    public Consumer(EventStorage storage) {
         this.storage = storage;
     }
 

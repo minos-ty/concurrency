@@ -44,7 +44,7 @@ public class PrintOddEvenWaitAndNotify {
             Thread thread1 = new Thread(turingRunner,"EvenThread");
             Thread thread2 = new Thread(turingRunner,"OddThread");
             thread1.start();
-            // 确保线程一线执行
+            // 确保线程一先执行
             Thread.sleep(100);
             thread2.start();
         }
