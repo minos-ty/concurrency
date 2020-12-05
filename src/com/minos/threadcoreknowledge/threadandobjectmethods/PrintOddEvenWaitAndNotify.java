@@ -10,7 +10,7 @@ package com.minos.threadcoreknowledge.threadandobjectmethods;
  */
 public class PrintOddEvenWaitAndNotify {
 
-    private static int count = 0;
+    private static int count;
     private static Object lock = new Object();
 
     //1.拿到锁就打印
