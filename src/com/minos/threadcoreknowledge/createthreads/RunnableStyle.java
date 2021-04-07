@@ -7,13 +7,13 @@ package com.minos.threadcoreknowledge.createthreads;
  */
 public class RunnableStyle implements Runnable{
 
-    public static void main(String[] args) {
-        Thread thread = new Thread(new RunnableStyle());
-        thread.start();
-    }
-
     @Override
     public void run() {
         System.out.println("实现Runnable接口并传入Thread类");
+    }
+
+    public static void main(String[] args) {
+        Thread thread = new Thread(new RunnableStyle());
+        thread.start();
     }
 }
